@@ -181,7 +181,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 1000;
+            z-index: 2001;
             transition: var(--transition);
             background: transparent;
         }
@@ -258,6 +258,8 @@
             color: var(--text-main);
             font-size: 1.5rem;
             cursor: pointer;
+            z-index: 2002;
+            position: relative;
         }
 
         /* Mobile Menu */
@@ -280,14 +282,6 @@
             font-family: var(--font-head);
             font-size: 2.5rem;
             color: var(--text-main);
-        }
-        .mobile-menu-close {
-            position: absolute;
-            top: 2rem; right: 2rem;
-            background: none; border: none;
-            color: var(--text-main);
-            font-size: 2rem;
-            cursor: pointer;
         }
 
         /* Hero Section */
@@ -326,6 +320,7 @@
         .hero-image-wrapper {
             position: relative;
             height: 100vh;
+            width: 100%;
             overflow: hidden;
             border-radius: 0 0 0 var(--radius-lg);
         }
@@ -1063,50 +1058,64 @@
         }
 
         /* ==========================================
-           MANDATORY MOBILE OVERRIDES (DO NOT EDIT)
+           TABLET & MOBILE OPTIMIZATION
            ========================================== */
-        *, *::before, *::after { box-sizing: border-box; }
-        html, body { overflow-x: hidden !important; width: 100%; margin: 0; padding: 0; }
-        img, video, iframe { max-width: 100%; height: auto; }
-        a { color: inherit; text-decoration: none; }
-        
-        /* DESKTOP NAV DEFAULTS */
-        nav, header { position: fixed !important; top: 0 !important; left: 0 !important; width: 100% !important; z-index: 9999 !important; display: flex !important; justify-content: space-between !important; align-items: center !important; padding: 1rem 5% !important; background: rgba(10,10,10,0.9) !important; backdrop-filter: blur(20px) !important; box-sizing: border-box !important; }
-        body { padding-top: 100px !important; }
-        .hamburger, .menu-toggle, .mobile-menu-btn { display: none !important; }
-        .sidebar, .side-bar, .sticky-sidebar { display: flex; }
-        section, .section { padding: clamp(4rem, 8vh, 8rem) 5% !important; width: 100% !important; box-sizing: border-box !important; overflow: hidden; }
-        h1, h2, h3 { overflow-wrap: break-word; word-break: break-word; max-width: 100%; }
+        @media (max-width: 1024px) {
+            .hero { grid-template-columns: 1fr; min-height: auto; }
+            .hero-content { padding: 8rem 5% 4rem; text-align: center; align-items: center; }
+            .hero-content p { margin: 0 auto 2rem; }
+            .hero-image-wrapper { height: 50vh; border-radius: 0; }
+            .hero-image-wrapper::after { background: linear-gradient(to top, var(--bg) 0%, transparent 50%); }
+            
+            .about-grid, .info-grid, .ba-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .features-grid, .services-grid, .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+            .team-grid { grid-template-columns: repeat(2, 1fr); }
+            .bento-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+            .nav-actions .btn { display: none; }
+        }
 
-        /* MOBILE OVERRIDES */
         @media (max-width: 768px) {
-            nav, header { padding: 15px !important; background: rgba(0,0,0,0.98) !important; border-bottom: 1px solid rgba(255,255,255,0.05); }
-            nav .logo, nav .brand, header .logo { font-size: 1.1rem !important; max-width: 50vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-right: auto; }
-            nav .nav-links, nav .desktop-nav, nav ul { display: none !important; }
-            .hamburger, .menu-toggle, .mobile-menu-btn { display: flex !important; align-items: center; justify-content: center; font-size: 24px; color: white; background: none; border: none; cursor: pointer; z-index: 101; margin-left: 15px; }
+            nav { padding: 1rem 5%; background: rgba(8, 8, 8, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-glass); }
+            .logo { font-size: 1.5rem; }
             
-            .hero { min-height: auto !important; padding-top: 130px !important; justify-content: flex-start !important; gap: 2rem !important; }
-            .hero h1, .hero-title { font-size: clamp(2rem, 8vw, 3rem) !important; margin-bottom: 1rem !important; }
-            .hero p, .hero-subtitle { font-size: 1rem !important; margin-bottom: 1.5rem !important; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; padding: 2rem 5%; }
+            .stat-card { padding: 1rem; }
+            .stat-number { font-size: 2.5rem; }
             
-            [class*="grid"], [class*="row"], .about-grid, .services-grid, .team-grid, .gallery-grid, .bento-grid, .footer-grid, .footer-columns, .hero { grid-template-columns: 1fr !important; display: flex !important; flex-direction: column !important; }
-            [class*="grid"] > *, .bento-grid > *, .gallery-grid > * { grid-column: span 1 !important; grid-row: span 1 !important; width: 100% !important; }
+            .features-grid, .services-grid, .reviews-grid, .team-grid { grid-template-columns: 1fr; }
+            .bento-grid { grid-template-columns: 1fr; }
+            .bento-large, .bento-wide, .bento-tall { grid-column: span 1; grid-row: span 1; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
             
-            footer { padding: 2rem 1rem !important; }
-            .hero-buttons, .hero-cta, .hero .btn-group, .hero-actions { display: flex !important; flex-direction: column !important; align-items: center; width: 100%; padding: 0 1rem; }
-            .hero-buttons a, .hero-buttons button, .hero .btn-group a { width: 100% !important; max-width: 320px; text-align: center; box-sizing: border-box; margin: 0 0 15px 0 !important; }
+            .hero-content { padding: 7rem 5% 2rem; }
+            .hero-buttons { flex-direction: column; width: 100%; }
+            .hero-buttons .btn { width: 100%; }
             
-            [class*="chat-widget"], [class*="floating-chat"], #chat-widget { bottom: 90px !important; right: 15px !important; }
-            .sidebar, .side-bar, .sticky-sidebar { display: none !important; }
-            .cursor-dot, .cursor-outline { display: none !important; }
-
-            /* Specific Mobile Adjustments for this design */
-            .hero-image-wrapper { height: 50vh; border-radius: var(--radius-md); margin: 0 5%; }
-            .hero-image-wrapper::after { background: linear-gradient(to top, var(--bg) 0%, transparent 30%); }
-            .mobile-sticky-cta { display: block !important; }
-            .final-cta { margin: 0 0 4rem 0; border-radius: 0; padding: 6rem 5%; }
+            .about-image img { height: 400px; }
+            .ba-card img { height: 400px; }
+            .map-container iframe { height: 350px; }
+            .hours-card { padding: 2rem 1.5rem; }
+            
+            .ig-grid { grid-template-columns: repeat(3, 1fr); }
+            .menu-container { padding: 2rem 1rem; }
+            .newsletter-form { flex-direction: column; }
+            
+            section { padding: 4rem 5%; }
+            .section-header { margin-bottom: 2rem; }
+            
+            .sticky-sidebar { display: none; }
+            .mobile-sticky-cta { display: block; }
+            .final-cta { padding: 4rem 5%; margin: 0 0 4rem 0; border-radius: 0; }
+            footer { padding: 4rem 5% 6rem; }
+            
+            .chat-widget { bottom: 80px; right: 20px; }
+            .chat-panel { width: calc(100vw - 40px); transform-origin: bottom right; }
             .promo-content { padding: 2rem; }
-            .chat-panel { width: calc(100vw - 30px); right: 0; transform-origin: bottom right; }
         }
     </style>
 </head>
@@ -1146,9 +1155,6 @@
 
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu" id="mobile-menu">
-        <button class="mobile-menu-close" id="mobile-close-btn">
-            <i class="fas fa-times"></i>
-        </button>
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#team">Experts</a>
@@ -1762,21 +1768,24 @@
 
             // Mobile Menu Toggle
             const hamburgerBtn = document.getElementById('hamburger-btn');
-            const mobileCloseBtn = document.getElementById('mobile-close-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             const mobileLinks = mobileMenu.querySelectorAll('a');
 
-            hamburgerBtn.addEventListener('click', () => {
-                mobileMenu.classList.add('active');
-            });
+            const toggleMenu = () => {
+                mobileMenu.classList.toggle('active');
+                if (mobileMenu.classList.contains('active')) {
+                    hamburgerBtn.innerHTML = '<i class="fas fa-times"></i>';
+                } else {
+                    hamburgerBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            };
 
-            mobileCloseBtn.addEventListener('click', () => {
-                mobileMenu.classList.remove('active');
-            });
+            hamburgerBtn.addEventListener('click', toggleMenu);
 
             mobileLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.remove('active');
+                    hamburgerBtn.innerHTML = '<i class="fas fa-bars"></i>';
                 });
             });
 
@@ -1954,50 +1963,5 @@
             console.error("Script error:", e);
         }
     </script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger') || document.querySelector('.menu-toggle');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    
-    if (hamburger && mobileMenu) {
-      hamburger.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        const isActive = mobileMenu.classList.contains('active');
-        if (isActive) {
-          mobileMenu.classList.remove('active');
-          mobileMenu.style.transform = 'translateX(100%)';
-          hamburger.innerHTML = '<i class="fas fa-bars"></i>';
-        } else {
-          mobileMenu.classList.add('active');
-          mobileMenu.style.transform = 'translateX(0)';
-          hamburger.innerHTML = '<i class="fas fa-times" style="font-size: 28px;"></i>';
-        }
-      });
-
-      // Close when clicking any link inside the mobile menu
-      const links = mobileMenu.querySelectorAll('a');
-      links.forEach(link => {
-        link.addEventListener('click', function() {
-          mobileMenu.classList.remove('active');
-          mobileMenu.style.transform = 'translateX(100%)';
-          hamburger.innerHTML = '<i class="fas fa-bars"></i>';
-        });
-      });
-      
-      // Close button inside menu (if it exists separately)
-      const closeBtn = mobileMenu.querySelector('.close-menu') || mobileMenu.querySelector('.mobile-close');
-      if (closeBtn) {
-        closeBtn.addEventListener('click', function() {
-          mobileMenu.classList.remove('active');
-          mobileMenu.style.transform = 'translateX(100%)';
-          hamburger.innerHTML = '<i class="fas fa-bars"></i>';
-        });
-      }
-    }
-  });
-</script>
 </body>
 </html>
