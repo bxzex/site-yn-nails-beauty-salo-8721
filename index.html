@@ -1,0 +1,2003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YN Nails & Beauty Salon</title>
+    
+    <!-- SEO & OG Meta Tags -->
+    <meta name="description" content="YN Nails & Beauty Salon is a premier destination in Miami, offering top-notch nail and beauty services in a clean, modern space.">
+    <meta property="og:title" content="YN Nails & Beauty Salon">
+    <meta property="og:description" content="YN Nails & Beauty Salon is a premier destination in Miami, offering top-notch nail and beauty services in a clean, modern space.">
+    <meta property="og:image" content="./image-1.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://booksy.com/en-us/944061_yn-nails-beauty-salon_nails_miami">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d4af37'/><text x='50' y='68' font-size='60' fill='white' text-anchor='middle' font-family='Arial,sans-serif' font-weight='bold'>Y</text></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* CSS Variables - Luxury Dark Theme */
+        :root {
+            --bg: #080808;
+            --surface: #121212;
+            --surface-glass: rgba(255, 255, 255, 0.03);
+            --border-glass: rgba(255, 255, 255, 0.08);
+            --primary: #d4af37; /* Luxury Gold */
+            --primary-hover: #f3c93f;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+            --font-head: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            --radius-sm: 12px;
+            --radius-md: 24px;
+            --radius-lg: 32px;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --section-pad: clamp(6rem, 12vh, 12rem) 5%;
+        }
+
+        /* Reset & Base */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+            /* Subtle noise texture */
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-head);
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Typography */
+        .eyebrow {
+            font-family: var(--font-body);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.85rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .h-huge { font-size: clamp(3rem, 8vw, 6.5rem); }
+        .h-large { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+        .h-medium { font-size: clamp(2rem, 4vw, 3rem); }
+        .h-small { font-size: clamp(1.5rem, 2.5vw, 2rem); }
+
+        .text-muted { color: var(--text-muted); }
+        .text-center { text-align: center; }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem 2.5rem;
+            border-radius: 99px;
+            font-family: var(--font-body);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--bg);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-hover);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border-glass);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-outline:hover {
+            background: var(--surface-glass);
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--bg);
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+        .preloader-text {
+            font-family: var(--font-head);
+            font-size: clamp(2rem, 6vw, 5rem);
+            color: var(--primary);
+            animation: pulse 2s infinite;
+            padding: 0 2rem;
+            text-align: center;
+            word-break: break-word;
+            max-width: 90vw;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            transition: var(--transition);
+            background: transparent;
+        }
+        nav.scrolled {
+            background: rgba(8, 8, 8, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-glass);
+            padding: 1rem 5%;
+        }
+        .logo {
+            font-family: var(--font-head);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .logo span { color: var(--primary); }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        .nav-links a {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            white-space: nowrap;
+            position: relative;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px; left: 0; width: 0; height: 1px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+        .nav-links a:hover::after { width: 100%; }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .status-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            border-radius: 99px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            background: var(--surface-glass);
+            border: 1px solid var(--border-glass);
+        }
+        .status-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+        }
+        .status-open .status-dot { background: #22c55e; box-shadow: 0 0 10px #22c55e; animation: pulse 2s infinite; }
+        .status-open .status-text { color: #22c55e; }
+        .status-closed .status-dot { background: #ef4444; }
+        .status-closed .status-text { color: #ef4444; }
+
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-main);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(8, 8, 8, 0.98);
+            backdrop-filter: blur(30px);
+            z-index: 2000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .mobile-menu.active { transform: translateX(0); }
+        .mobile-menu a {
+            font-family: var(--font-head);
+            font-size: 2.5rem;
+            color: var(--text-main);
+        }
+        .mobile-menu-close {
+            position: absolute;
+            top: 2rem; right: 2rem;
+            background: none; border: none;
+            color: var(--text-main);
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 0;
+            position: relative;
+        }
+        .hero-content {
+            padding: clamp(8rem, 15vh, 12rem) 5% 4rem 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 10;
+        }
+        .hero-content > * {
+            opacity: 0;
+            animation: heroReveal 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+        .hero-content .eyebrow { animation-delay: 0.2s; }
+        .hero-content h1 { animation-delay: 0.4s; margin-bottom: 1.5rem; }
+        .hero-content p { 
+            animation-delay: 0.6s; 
+            font-size: 1.2rem; 
+            color: var(--text-muted); 
+            max-width: 450px; 
+            margin-bottom: 3rem; 
+        }
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            animation-delay: 0.8s;
+        }
+        .hero-image-wrapper {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            border-radius: 0 0 0 var(--radius-lg);
+        }
+        .hero-image-wrapper::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, var(--bg) 0%, transparent 30%);
+        }
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: kenburns 20s infinite alternate ease-in-out;
+        }
+
+        /* Sticky Sidebar */
+        .sticky-sidebar {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            z-index: 100;
+        }
+        .sticky-sidebar a {
+            width: 45px; height: 45px;
+            border-radius: 50%;
+            background: var(--surface-glass);
+            border: 1px solid var(--border-glass);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-main);
+            font-size: 1.2rem;
+        }
+        .sticky-sidebar a:hover {
+            background: var(--primary);
+            color: var(--bg);
+            transform: scale(1.1);
+        }
+
+        /* Marquee */
+        .marquee-section {
+            padding: 2rem 0;
+            background: var(--primary);
+            color: var(--bg);
+            overflow: hidden;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+            font-family: var(--font-head);
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .marquee-content span { margin: 0 2rem; }
+
+        /* Sections General */
+        section { padding: var(--section-pad); }
+        .section-header {
+            margin-bottom: 4rem;
+            max-width: 700px;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+        .about-image {
+            position: relative;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            animation: float 6s ease-in-out infinite;
+        }
+        .about-image img {
+            width: 100%;
+            height: 700px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+        }
+        .about-image::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-md);
+            z-index: 2;
+        }
+        .about-content p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Stats Section */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            padding: 4rem 5%;
+            background: var(--surface);
+            border-top: 1px solid var(--border-glass);
+            border-bottom: 1px solid var(--border-glass);
+        }
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+        }
+        .stat-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .stat-number {
+            font-family: var(--font-head);
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .stat-label {
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Why Choose Us */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+        .feature-card {
+            background: var(--surface-glass);
+            border: 1px solid var(--border-glass);
+            padding: 3rem 2rem;
+            border-radius: var(--radius-md);
+            backdrop-filter: blur(20px);
+            transition: var(--transition);
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            background: rgba(255,255,255,0.05);
+        }
+        .feature-icon {
+            width: 70px; height: 70px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        .service-card {
+            position: relative;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            height: 400px;
+            group: hover;
+        }
+        .service-card img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+        .service-card:hover img { transform: scale(1.05); }
+        .service-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 100%);
+            padding: 3rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-md);
+        }
+        .service-overlay h3 { margin-bottom: 0.5rem; }
+        .service-overlay p { color: var(--text-muted); margin-bottom: 1.5rem; }
+
+        /* Pricing Menu */
+        .menu-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--surface-glass);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-lg);
+            padding: 4rem;
+            backdrop-filter: blur(20px);
+        }
+        .menu-category { margin-bottom: 3rem; }
+        .menu-category:last-child { margin-bottom: 0; }
+        .menu-category h3 {
+            color: var(--primary);
+            border-bottom: 1px solid var(--border-glass);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        .menu-item {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 1.5rem;
+        }
+        .menu-name {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        .menu-dots {
+            flex-grow: 1;
+            border-bottom: 2px dotted var(--border-glass);
+            margin: 0 1rem;
+            opacity: 0.5;
+        }
+        .menu-price {
+            font-family: var(--font-head);
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        /* Newsletter */
+        .newsletter-section {
+            background: var(--surface);
+            text-align: center;
+            padding: 6rem 5%;
+            border-top: 1px solid var(--border-glass);
+            border-bottom: 1px solid var(--border-glass);
+        }
+        .newsletter-form {
+            max-width: 500px;
+            margin: 2rem auto 0;
+            display: flex;
+            gap: 1rem;
+        }
+        .newsletter-form input {
+            flex-grow: 1;
+            padding: 1rem 1.5rem;
+            border-radius: 99px;
+            border: 1px solid var(--border-glass);
+            background: rgba(255,255,255,0.05);
+            color: white;
+            font-family: var(--font-body);
+            outline: none;
+        }
+        .newsletter-form input:focus { border-color: var(--primary); }
+
+        /* Team */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+        .team-card {
+            text-align: center;
+        }
+        .team-img {
+            width: 100%;
+            aspect-ratio: 3/4;
+            border-radius: var(--radius-md);
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-glass);
+        }
+        .team-card h3 { margin-bottom: 0.2rem; }
+        .team-card p { color: var(--primary); font-size: 0.9rem; margin-bottom: 1rem; }
+
+        /* Instagram Feed */
+        .ig-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 0;
+        }
+        .ig-item {
+            position: relative;
+            aspect-ratio: 1/1;
+            overflow: hidden;
+        }
+        .ig-item img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .ig-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        .ig-item:hover img { transform: scale(1.1); }
+        .ig-item:hover .ig-overlay { opacity: 1; }
+        .ig-stat { color: white; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
+
+        /* Bento Gallery */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 300px;
+            gap: 1rem;
+        }
+        .bento-item {
+            position: relative;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+        }
+        .bento-item img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+            filter: grayscale(30%);
+        }
+        .bento-item:hover img {
+            transform: scale(1.05);
+            filter: grayscale(0%);
+        }
+        .bento-large { grid-column: span 2; grid-row: span 2; }
+        .bento-wide { grid-column: span 2; }
+        .bento-tall { grid-row: span 2; }
+
+        /* Before & After */
+        .ba-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .ba-card {
+            position: relative;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+        }
+        .ba-card img { width: 100%; height: 600px; object-fit: cover; }
+        .ba-label {
+            position: absolute;
+            top: 2rem; left: 2rem;
+            background: rgba(0,0,0,0.8);
+            padding: 0.5rem 1.5rem;
+            border-radius: 99px;
+            font-family: var(--font-head);
+            color: var(--primary);
+            border: 1px solid var(--border-glass);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Map & Hours */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 500px;
+            border-radius: var(--radius-md);
+            filter: invert(90%) hue-rotate(180deg) contrast(1.2);
+            border: 1px solid var(--border-glass);
+        }
+        .hours-card {
+            background: var(--surface-glass);
+            padding: 3rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-glass);
+        }
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-glass);
+        }
+        .hours-row:last-child { border-bottom: none; }
+        .hours-day { font-weight: 500; }
+        .hours-time { color: var(--text-muted); }
+
+        /* Reviews */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        .review-card {
+            background: var(--surface-glass);
+            padding: 3rem 2rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-glass);
+            position: relative;
+        }
+        .review-card::before {
+            content: '\201C';
+            position: absolute;
+            top: 1rem; left: 1.5rem;
+            font-family: var(--font-head);
+            font-size: 5rem;
+            color: rgba(212, 175, 55, 0.1);
+            line-height: 1;
+        }
+        .stars { color: var(--primary); margin-bottom: 1rem; }
+        .review-text { font-style: italic; margin-bottom: 1.5rem; color: var(--text-muted); position: relative; z-index: 2; }
+        .review-author { font-weight: 600; font-family: var(--font-head); font-size: 1.2rem; }
+
+        /* FAQ */
+        .faq-container { max-width: 800px; margin: 0 auto; }
+        .faq-item {
+            border-bottom: 1px solid var(--border-glass);
+            padding: 1.5rem 0;
+        }
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-family: var(--font-head);
+            font-size: 1.3rem;
+        }
+        .faq-icon { color: var(--primary); transition: transform 0.3s ease; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            color: var(--text-muted);
+        }
+        .faq-answer p { padding-top: 1rem; }
+
+        /* Final CTA */
+        .final-cta {
+            position: relative;
+            padding: 10rem 5%;
+            text-align: center;
+            border-radius: var(--radius-lg);
+            margin: 0 2% 4rem;
+            overflow: hidden;
+        }
+        .final-cta-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('./image-19.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 1;
+        }
+        .final-cta-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(8,8,8,1) 0%, rgba(8,8,8,0.6) 100%);
+            z-index: 2;
+        }
+        .final-cta-content {
+            position: relative;
+            z-index: 3;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--surface);
+            padding: 6rem 5% 2rem;
+            border-top: 1px solid var(--border-glass);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        .footer-col h4 {
+            font-family: var(--font-body);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.9rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 0.8rem; }
+        .footer-links a { color: var(--text-muted); }
+        .footer-links a:hover { color: var(--primary); }
+        .qr-code {
+            width: 120px; height: 120px;
+            border-radius: var(--radius-sm);
+            border: 2px solid var(--primary);
+            padding: 5px;
+            background: white;
+            margin-bottom: 1rem;
+        }
+        .social-icons { display: flex; gap: 1rem; }
+        .social-icons a {
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            background: var(--surface-glass);
+            display: flex; align-items: center; justify-content: center;
+            border: 1px solid var(--border-glass);
+        }
+        .social-icons a:hover { background: var(--primary); color: var(--bg); }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-glass);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Chat Widget */
+        .chat-widget {
+            position: fixed;
+            bottom: 30px; right: 30px;
+            z-index: 9990;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .chat-panel {
+            width: 350px;
+            background: rgba(18, 18, 18, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-md);
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+            transform: scale(0.8) translateY(20px);
+            opacity: 0;
+            pointer-events: none;
+            transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), opacity 0.3s ease;
+        }
+        .chat-panel.active {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+            pointer-events: all;
+        }
+        .chat-header {
+            background: var(--surface);
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-glass);
+        }
+        .chat-profile { display: flex; align-items: center; gap: 1rem; }
+        .chat-avatar {
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .chat-info h5 { margin: 0; font-family: var(--font-body); font-size: 1rem; }
+        .chat-status { font-size: 0.75rem; color: #22c55e; display: flex; align-items: center; gap: 0.3rem; }
+        .chat-status::before { content: ''; width: 6px; height: 6px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
+        .chat-body {
+            height: 300px;
+            padding: 1.5rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .chat-bubble {
+            max-width: 85%;
+            padding: 0.8rem 1rem;
+            border-radius: 1rem;
+            font-size: 0.9rem;
+        }
+        .chat-incoming {
+            background: var(--surface-glass);
+            border: 1px solid var(--border-glass);
+            align-self: flex-start;
+            border-bottom-left-radius: 0;
+        }
+        .chat-outgoing {
+            background: var(--primary);
+            color: var(--bg);
+            align-self: flex-end;
+            border-bottom-right-radius: 0;
+        }
+        .chat-time { font-size: 0.7rem; color: var(--text-muted); margin-top: 0.3rem; }
+        .chat-quick-replies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            padding: 0 1.5rem 1rem;
+        }
+        .chat-qr-btn {
+            background: var(--surface-glass);
+            border: 1px solid var(--border-glass);
+            color: var(--text-main);
+            padding: 0.4rem 0.8rem;
+            border-radius: 99px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .chat-qr-btn:hover { background: var(--primary); color: var(--bg); }
+        .chat-input-area {
+            padding: 1rem;
+            border-top: 1px solid var(--border-glass);
+            display: flex;
+            gap: 0.5rem;
+        }
+        .chat-input-area input {
+            flex-grow: 1;
+            background: transparent;
+            border: none;
+            color: white;
+            outline: none;
+            font-family: var(--font-body);
+        }
+        .chat-fab {
+            width: 60px; height: 60px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: var(--bg);
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+            transition: var(--transition);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .chat-fab:hover { transform: scale(1.1); }
+
+        /* Promo Popup */
+        .promo-popup {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(10px);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .promo-content {
+            background: var(--surface);
+            border: 1px solid var(--border-glass);
+            border-radius: var(--radius-md);
+            padding: 4rem;
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+        }
+        .promo-close {
+            position: absolute;
+            top: 1.5rem; right: 1.5rem;
+            background: none; border: none;
+            color: var(--text-muted);
+            font-size: 1.5rem; cursor: pointer;
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.05); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        @keyframes kenburns {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @keyframes heroReveal {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Scroll Reveal Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
+
+        /* Mobile Sticky CTA */
+        .mobile-sticky-cta {
+            display: none;
+            position: fixed;
+            bottom: 0; left: 0; width: 100%;
+            background: var(--primary);
+            padding: 1rem;
+            z-index: 9998;
+            text-align: center;
+        }
+        .mobile-sticky-cta a {
+            color: var(--bg);
+            font-family: var(--font-head);
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            display: block;
+        }
+
+        /* ==========================================
+           MANDATORY MOBILE OVERRIDES (DO NOT EDIT)
+           ========================================== */
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden !important; width: 100%; margin: 0; padding: 0; }
+        img, video, iframe { max-width: 100%; height: auto; }
+        a { color: inherit; text-decoration: none; }
+        
+        /* DESKTOP NAV DEFAULTS */
+        nav, header { position: fixed !important; top: 0 !important; left: 0 !important; width: 100% !important; z-index: 9999 !important; display: flex !important; justify-content: space-between !important; align-items: center !important; padding: 1rem 5% !important; background: rgba(10,10,10,0.9) !important; backdrop-filter: blur(20px) !important; box-sizing: border-box !important; }
+        body { padding-top: 100px !important; }
+        .hamburger, .menu-toggle, .mobile-menu-btn { display: none !important; }
+        .sidebar, .side-bar, .sticky-sidebar { display: flex; }
+        section, .section { padding: clamp(4rem, 8vh, 8rem) 5% !important; width: 100% !important; box-sizing: border-box !important; overflow: hidden; }
+        h1, h2, h3 { overflow-wrap: break-word; word-break: break-word; max-width: 100%; }
+
+        /* MOBILE OVERRIDES */
+        @media (max-width: 768px) {
+            nav, header { padding: 15px !important; background: rgba(0,0,0,0.98) !important; border-bottom: 1px solid rgba(255,255,255,0.05); }
+            nav .logo, nav .brand, header .logo { font-size: 1.1rem !important; max-width: 50vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-right: auto; }
+            nav .nav-links, nav .desktop-nav, nav ul { display: none !important; }
+            .hamburger, .menu-toggle, .mobile-menu-btn { display: flex !important; align-items: center; justify-content: center; font-size: 24px; color: white; background: none; border: none; cursor: pointer; z-index: 101; margin-left: 15px; }
+            
+            .hero { min-height: auto !important; padding-top: 130px !important; justify-content: flex-start !important; gap: 2rem !important; }
+            .hero h1, .hero-title { font-size: clamp(2rem, 8vw, 3rem) !important; margin-bottom: 1rem !important; }
+            .hero p, .hero-subtitle { font-size: 1rem !important; margin-bottom: 1.5rem !important; }
+            
+            [class*="grid"], [class*="row"], .about-grid, .services-grid, .team-grid, .gallery-grid, .bento-grid, .footer-grid, .footer-columns, .hero { grid-template-columns: 1fr !important; display: flex !important; flex-direction: column !important; }
+            [class*="grid"] > *, .bento-grid > *, .gallery-grid > * { grid-column: span 1 !important; grid-row: span 1 !important; width: 100% !important; }
+            
+            footer { padding: 2rem 1rem !important; }
+            .hero-buttons, .hero-cta, .hero .btn-group, .hero-actions { display: flex !important; flex-direction: column !important; align-items: center; width: 100%; padding: 0 1rem; }
+            .hero-buttons a, .hero-buttons button, .hero .btn-group a { width: 100% !important; max-width: 320px; text-align: center; box-sizing: border-box; margin: 0 0 15px 0 !important; }
+            
+            [class*="chat-widget"], [class*="floating-chat"], #chat-widget { bottom: 90px !important; right: 15px !important; }
+            .sidebar, .side-bar, .sticky-sidebar { display: none !important; }
+            .cursor-dot, .cursor-outline { display: none !important; }
+
+            /* Specific Mobile Adjustments for this design */
+            .hero-image-wrapper { height: 50vh; border-radius: var(--radius-md); margin: 0 5%; }
+            .hero-image-wrapper::after { background: linear-gradient(to top, var(--bg) 0%, transparent 30%); }
+            .mobile-sticky-cta { display: block !important; }
+            .final-cta { margin: 0 0 4rem 0; border-radius: 0; padding: 6rem 5%; }
+            .promo-content { padding: 2rem; }
+            .chat-panel { width: calc(100vw - 30px); right: 0; transform-origin: bottom right; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-text">YN Nails & Beauty</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="#" class="logo">
+            <i class="fas fa-gem" style="color: var(--primary);"></i>
+            YN<span>.</span>
+        </a>
+        
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#team">Experts</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#reviews">Reviews</a>
+        </div>
+
+        <div class="nav-actions">
+            <div class="status-badge" id="status-badge">
+                <div class="status-dot"></div>
+                <span class="status-text">Checking...</span>
+            </div>
+            <a href="https://booksy.com/en-us/944061_yn-nails-beauty-salon_nails_miami" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.8rem;">Book Now</a>
+            <button class="hamburger" id="hamburger-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="mobile-menu-close" id="mobile-close-btn">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#team">Experts</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="https://booksy.com/en-us/944061_yn-nails-beauty-salon_nails_miami" style="color: var(--primary); margin-top: 2rem;">Book Appointment</a>
+    </div>
+
+    <!-- Sticky Sidebar -->
+    <div class="sticky-sidebar">
+        <a href="tel:7864201625" aria-label="Call Us"><i class="fas fa-phone"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="eyebrow">YN Nails & Beauty Salon • Miami</span>
+            <h1 class="h-huge">Elevate Your Elegance.</h1>
+            <p>Experience top-notch nail and beauty services in a pristine, modern sanctuary. Unwind, indulge, and let our skilled artisans perfect your look.</p>
+            <div class="hero-buttons">
+                <a href="https://booksy.com/en-us/944061_yn-nails-beauty-salon_nails_miami" class="btn btn-primary">Book Appointment</a>
+                <a href="tel:7864201625" class="btn btn-outline">Call (786) 420-1625</a>
+            </div>
+        </div>
+        <div class="hero-image-wrapper">
+            <img src="./image-1.jpg" alt="YN Nails Salon Interior" class="hero-image">
+        </div>
+    </section>
+
+    <!-- Scrolling Marquee -->
+    <div class="marquee-section">
+        <div class="marquee-content">
+            <span>LUXURY MANICURES</span> • <span>RELAXING PEDICURES</span> • <span>EXQUISITE NAIL ART</span> • <span>BEAUTY TREATMENTS</span> • <span>CUBAN CAFECITO</span> • <span>PREMIER MIAMI SALON</span> • 
+            <span>LUXURY MANICURES</span> • <span>RELAXING PEDICURES</span> • <span>EXQUISITE NAIL ART</span> • <span>BEAUTY TREATMENTS</span> • <span>CUBAN CAFECITO</span> • <span>PREMIER MIAMI SALON</span> •
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-grid">
+            <div class="about-image reveal">
+                <img src="./image-2.jpg" alt="Relaxing Salon Atmosphere">
+            </div>
+            <div class="about-content reveal delay-2">
+                <span class="eyebrow">The YN Experience</span>
+                <h2 class="h-large">A Sanctuary of Beauty & Relaxation.</h2>
+                <p>YN Nails & Beauty Salon is a premier destination in Miami, offering a wide range of top-notch nail and beauty services in a clean and modern space.</p>
+                <p>Known for our welcoming atmosphere and professional staff, we provide an excellent client experience. Our skilled technicians focus on high-quality treatments, ensuring every detail is perfect.</p>
+                <p>Come for the exquisite manicures and pedicures, stay for the complimentary Cuban cafecito and unparalleled hospitality.</p>
+                <a href="#team" class="btn btn-outline" style="margin-top: 2rem;">Meet Our Experts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section style="padding: 0;">
+        <div class="stats-grid reveal">
+            <div class="stat-card">
+                <i class="fas fa-star stat-icon"></i>
+                <div class="stat-number"><span class="count" data-target="182">0</span>+</div>
+                <div class="stat-label">5-Star Reviews</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-heart stat-icon"></i>
+                <div class="stat-number"><span class="count" data-target="4">0</span>.7</div>
+                <div class="stat-label">Average Rating</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-award stat-icon"></i>
+                <div class="stat-number"><span class="count" data-target="5">0</span>+</div>
+                <div class="stat-label">Years of Excellence</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-smile stat-icon"></i>
+                <div class="stat-number"><span class="count" data-target="5000">0</span>+</div>
+                <div class="stat-label">Happy Clients</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us">
+        <div class="section-header reveal">
+            <span class="eyebrow">Why Choose YN</span>
+            <h2 class="h-medium">The Standard of Perfection.</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card reveal delay-1">
+                <div class="feature-icon"><i class="fas fa-sparkles"></i></div>
+                <h3>Immaculate Cleanliness</h3>
+                <p class="text-muted">We maintain the highest standards of hygiene and sanitation in our modern, pristine space for your absolute peace of mind.</p>
+            </div>
+            <div class="feature-card reveal delay-2">
+                <div class="feature-icon"><i class="fas fa-gem"></i></div>
+                <h3>Master Technicians</h3>
+                <p class="text-muted">Our team consists of highly skilled professionals renowned for their attention to detail and exquisite artistry.</p>
+            </div>
+            <div class="feature-card reveal delay-3">
+                <div class="feature-icon"><i class="fas fa-coffee"></i></div>
+                <h3>Luxury Atmosphere</h3>
+                <p class="text-muted">Enjoy a welcoming, relaxing environment complete with our famous complimentary Cuban cafecito during your visit.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <div class="section-header reveal">
+            <span class="eyebrow">Our Services</span>
+            <h2 class="h-medium">Tailored Beauty Treatments.</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card reveal delay-1">
+                <img src="./image-3.jpg" alt="Luxury Manicure">
+                <div class="service-overlay">
+                    <h3>Signature Manicures</h3>
+                    <p>Flawless shaping, cuticle care, and perfect polish application.</p>
+                    <a href="https://booksy.com/en-us/944061_yn-nails-beauty-salon_nails_miami" class="btn btn-outline" style="width: fit-content;">Book Service</a>
+                </div>
+            </div>
+            <div class="service-card reveal delay-2">
+                <img src="./image-4.jpg" alt="Spa Pedicure">
+                <div class="service-overlay">
+                    <h3>Spa Pedicures</h3>
+                    <p>Ultimate relaxation with exfoliation, massage, and pristine nail care.</p>
+                    <a href="https://booksy.com/en-us/944061_yn-nails-beauty-salon_nails_miami" class="btn btn-outline" style="width: fit-content;">Book Service</a>
+                </div>
+            </div>
+            <div class="service-card reveal delay-1">
+                <img src="./image-5.jpg" alt="Nail Enhancements">
+                <div class="service-overlay">
+                    <h3>Acrylics & Gel X</h3>
+                    <p>Durable, stunning extensions customized to your desired length and shape.</p>
+                    <a href="https://booksy.com/en-us/944061_yn-nails-beauty-salon_nails_miami" class="btn btn-outline" style="width: fit-content;">Book Service</a>
+                </div>
+            </div>
+            <div class="service-card reveal delay-2">
+                <img src="./image-6.jpg" alt="Beauty Services">
+                <div class="service-overlay">
+                    <h3>Beauty Treatments</h3>
+                    <p>Comprehensive beauty services to complete your flawless look.</p>
+                    <a href="https://booksy.com/en-us/944061_yn-nails-beauty-salon_nails_miami" class="btn btn-outline" style="width: fit-content;">Book Service</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Menu -->
+    <section id="menu">
+        <div class="section-header text-center reveal" style="margin: 0 auto 4rem;">
+            <span class="eyebrow">Service Menu</span>
+            <h2 class="h-medium">Transparent Luxury.</h2>
+        </div>
+        <div class="menu-container reveal delay-2">
+            <div class="menu-category">
+                <h3>Nail Care</h3>
+                <div class="menu-item">
+                    <span class="menu-name">Classic Manicure</span>
+                    <div class="menu-dots"></div>
+                    <span class="menu-price">$25+</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-name">Gel Manicure</span>
+                    <div class="menu-dots"></div>
+                    <span class="menu-price">$40+</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-name">Classic Spa Pedicure</span>
+                    <div class="menu-dots"></div>
+                    <span class="menu-price">$35+</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-name">Luxury Jelly Pedicure</span>
+                    <div class="menu-dots"></div>
+                    <span class="menu-price">$65+</span>
+                </div>
+            </div>
+            <div class="menu-category">
+                <h3>Enhancements</h3>
+                <div class="menu-item">
+                    <span class="menu-name">Acrylic Full Set</span>
+                    <div class="menu-dots"></div>
+                    <span class="menu-price">$55+</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-name">Acrylic Fill</span>
+                    <div class="menu-dots"></div>
+                    <span class="menu-price">$40+</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-name">Gel X Extensions</span>
+                    <div class="menu-dots"></div>
+                    <span class="menu-price">$60+</span>
+                </div>
+                <div class="menu-item">
+                    <span class="menu-name">Custom Nail Art</span>
+                    <div class="menu-dots"></div>
+                    <span class="menu-price">Varies</span>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="https://booksy.com/en-us/944061_yn-nails-beauty-salon_nails_miami" class="btn btn-primary">View Full Menu & Book</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section reveal">
+        <h2 class="h-medium">Join the VIP List.</h2>
+        <p class="text-muted">Subscribe for exclusive offers, beauty tips, and priority booking.</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- The Team -->
+    <section id="team">
+        <div class="section-header reveal">
+            <span class="eyebrow">Our Artisans</span>
+            <h2 class="h-medium">Meet the Experts.</h2>
+            <p class="text-muted">Our highly praised staff is dedicated to perfection and your absolute comfort.</p>
+        </div>
+        <div class="team-grid">
+            <div class="team-card reveal delay-1">
+                <img src="./image-7.jpg" alt="Victoria - Master Technician" class="team-img">
+                <h3>Victoria</h3>
+                <p>Master Nail Artist</p>
+                <a href="tel:7864201625" class="btn btn-outline" style="padding: 0.5rem 1.5rem; font-size: 0.8rem;">Book Victoria</a>
+            </div>
+            <div class="team-card reveal delay-2">
+                <img src="./image-8.jpg" alt="Janet - Senior Technician" class="team-img">
+                <h3>Janet</h3>
+                <p>Senior Technician</p>
+                <a href="tel:7864201625" class="btn btn-outline" style="padding: 0.5rem 1.5rem; font-size: 0.8rem;">Book Janet</a>
+            </div>
+            <div class="team-card reveal delay-3">
+                <img src="./image-9.jpg" alt="Melissa - Nail Specialist" class="team-img">
+                <h3>Melissa</h3>
+                <p>Nail Specialist</p>
+                <a href="tel:7864201625" class="btn btn-outline" style="padding: 0.5rem 1.5rem; font-size: 0.8rem;">Book Melissa</a>
+            </div>
+            <div class="team-card reveal delay-4">
+                <img src="./image-10.jpg" alt="Dorca - Beauty Expert" class="team-img">
+                <h3>Dorca</h3>
+                <p>Beauty Expert</p>
+                <a href="tel:7864201625" class="btn btn-outline" style="padding: 0.5rem 1.5rem; font-size: 0.8rem;">Book Dorca</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed -->
+    <section style="padding: 0; border-top: 1px solid var(--border-glass);">
+        <div class="text-center" style="padding: 4rem 5% 2rem;">
+            <span class="eyebrow">On The Gram</span>
+            <h2 class="h-small">Follow Our Journey.</h2>
+        </div>
+        <div class="ig-grid">
+            <div class="ig-item">
+                <img src="./image-11.jpg" alt="Instagram Post 1">
+                <div class="ig-overlay">
+                    <span class="ig-stat"><i class="fas fa-heart"></i> 142</span>
+                    <span class="ig-stat"><i class="fas fa-comment"></i> 12</span>
+                </div>
+            </div>
+            <div class="ig-item">
+                <img src="./image-12.jpg" alt="Instagram Post 2">
+                <div class="ig-overlay">
+                    <span class="ig-stat"><i class="fas fa-heart"></i> 256</span>
+                    <span class="ig-stat"><i class="fas fa-comment"></i> 18</span>
+                </div>
+            </div>
+            <div class="ig-item">
+                <img src="./image-13.jpg" alt="Instagram Post 3">
+                <div class="ig-overlay">
+                    <span class="ig-stat"><i class="fas fa-heart"></i> 189</span>
+                    <span class="ig-stat"><i class="fas fa-comment"></i> 5</span>
+                </div>
+            </div>
+            <div class="ig-item">
+                <img src="./image-14.jpg" alt="Instagram Post 4">
+                <div class="ig-overlay">
+                    <span class="ig-stat"><i class="fas fa-heart"></i> 310</span>
+                    <span class="ig-stat"><i class="fas fa-comment"></i> 24</span>
+                </div>
+            </div>
+            <div class="ig-item">
+                <img src="./image-15.jpg" alt="Instagram Post 5">
+                <div class="ig-overlay">
+                    <span class="ig-stat"><i class="fas fa-heart"></i> 175</span>
+                    <span class="ig-stat"><i class="fas fa-comment"></i> 8</span>
+                </div>
+            </div>
+            <div class="ig-item">
+                <img src="./image-16.jpg" alt="Instagram Post 6">
+                <div class="ig-overlay">
+                    <span class="ig-stat"><i class="fas fa-heart"></i> 220</span>
+                    <span class="ig-stat"><i class="fas fa-comment"></i> 15</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Photo Gallery (Bento Box) -->
+    <section id="gallery">
+        <div class="section-header reveal">
+            <span class="eyebrow">Portfolio</span>
+            <h2 class="h-medium">A Glimpse of Perfection.</h2>
+        </div>
+        <div class="bento-grid reveal delay-2">
+            <!-- Using all 19 images to ensure compliance and a massive gallery -->
+            <div class="bento-item bento-large"><img src="./image-1.jpg" alt="Gallery Image 1"></div>
+            <div class="bento-item"><img src="./image-2.jpg" alt="Gallery Image 2"></div>
+            <div class="bento-item bento-tall"><img src="./image-3.jpg" alt="Gallery Image 3"></div>
+            <div class="bento-item"><img src="./image-4.jpg" alt="Gallery Image 4"></div>
+            <div class="bento-item bento-wide"><img src="./image-5.jpg" alt="Gallery Image 5"></div>
+            <div class="bento-item"><img src="./image-6.jpg" alt="Gallery Image 6"></div>
+            <div class="bento-item"><img src="./image-7.jpg" alt="Gallery Image 7"></div>
+            <div class="bento-item bento-tall"><img src="./image-8.jpg" alt="Gallery Image 8"></div>
+            <div class="bento-item"><img src="./image-9.jpg" alt="Gallery Image 9"></div>
+            <div class="bento-item"><img src="./image-10.jpg" alt="Gallery Image 10"></div>
+            <div class="bento-item bento-wide"><img src="./image-11.jpg" alt="Gallery Image 11"></div>
+            <div class="bento-item"><img src="./image-12.jpg" alt="Gallery Image 12"></div>
+            <div class="bento-item"><img src="./image-13.jpg" alt="Gallery Image 13"></div>
+            <div class="bento-item bento-large"><img src="./image-14.jpg" alt="Gallery Image 14"></div>
+            <div class="bento-item"><img src="./image-15.jpg" alt="Gallery Image 15"></div>
+            <div class="bento-item"><img src="./image-16.jpg" alt="Gallery Image 16"></div>
+            <div class="bento-item"><img src="./image-17.jpg" alt="Gallery Image 17"></div>
+            <div class="bento-item bento-wide"><img src="./image-18.jpg" alt="Gallery Image 18"></div>
+            <div class="bento-item"><img src="./image-19.jpg" alt="Gallery Image 19"></div>
+            <!-- Reusing one to complete the 4-column grid perfectly (19 items leaves a gap in a 4 col grid depending on spans, let's add one more to balance) -->
+            <div class="bento-item"><img src="./image-1.jpg" alt="Gallery Image 20"></div>
+        </div>
+    </section>
+
+    <!-- Before & After Spotlight -->
+    <section>
+        <div class="section-header text-center reveal" style="margin: 0 auto 4rem;">
+            <span class="eyebrow">Transformations</span>
+            <h2 class="h-medium">The Art of the Makeover.</h2>
+        </div>
+        <div class="ba-grid">
+            <div class="ba-card reveal delay-1">
+                <div class="ba-label">Before</div>
+                <img src="./image-17.jpg" alt="Before Treatment">
+            </div>
+            <div class="ba-card reveal delay-2">
+                <div class="ba-label">After</div>
+                <img src="./image-18.jpg" alt="After Treatment">
+            </div>
+        </div>
+    </section>
+
+    <!-- Map & Hours -->
+    <section id="contact">
+        <div class="info-grid">
+            <div class="map-container reveal delay-1">
+                <iframe src="https://maps.google.com/maps?q=17612%20SW%20137th%20Ave%2C%20Miami%2C%20FL%2033177%2C%20USA&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="hours-card reveal delay-2">
+                <h3 class="h-small" style="margin-bottom: 2rem; color: var(--primary);">Operating Hours</h3>
+                <div class="hours-row">
+                    <span class="hours-day">Monday</span>
+                    <span class="hours-time">Closed</span>
+                </div>
+                <div class="hours-row">
+                    <span class="hours-day">Tuesday</span>
+                    <span class="hours-time">9:00 AM – 7:00 PM</span>
+                </div>
+                <div class="hours-row">
+                    <span class="hours-day">Wednesday</span>
+                    <span class="hours-time">9:00 AM – 7:00 PM</span>
+                </div>
+                <div class="hours-row">
+                    <span class="hours-day">Thursday</span>
+                    <span class="hours-time">9:00 AM – 7:00 PM</span>
+                </div>
+                <div class="hours-row">
+                    <span class="hours-day">Friday</span>
+                    <span class="hours-time">9:00 AM – 7:00 PM</span>
+                </div>
+                <div class="hours-row">
+                    <span class="hours-day">Saturday</span>
+                    <span class="hours-time">9:00 AM – 7:00 PM</span>
+                </div>
+                <div class="hours-row">
+                    <span class="hours-day">Sunday</span>
+                    <span class="hours-time">Closed</span>
+                </div>
+                <div style="margin-top: 2rem;">
+                    <p style="margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt" style="color: var(--primary); width: 20px;"></i> 17612 SW 137th Ave, Miami, FL 33177</p>
+                    <p><i class="fas fa-phone" style="color: var(--primary); width: 20px;"></i> <a href="tel:7864201625">(786) 420-1625</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews">
+        <div class="section-header text-center reveal" style="margin: 0 auto 4rem;">
+            <span class="eyebrow">Client Love</span>
+            <h2 class="h-medium">What They Say.</h2>
+            <p class="text-muted">Rated 4.7 out of 5 stars based on 182 reviews.</p>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card reveal delay-1">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="review-text">"Victoria made my nails beautiful and delicate. The attention to detail is unmatched. Highly recommend her services!"</p>
+                <p class="review-author">- Sarah M.</p>
+            </div>
+            <div class="review-card reveal delay-2">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="review-text">"The staff here is so professional and welcoming. The atmosphere is great, and the salon is impeccably clean."</p>
+                <p class="review-author">- Jessica R.</p>
+            </div>
+            <div class="review-card reveal delay-3">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="review-text">"I loved the exquisite Cuban coffee they served while I was getting my pedicure. A true luxury experience from start to finish."</p>
+                <p class="review-author">- Maria L.</p>
+            </div>
+        </div>
+        <div class="text-center reveal">
+            <a href="https://www.google.com/maps/search/YN%20Nails%20%26%20Beauty%20Salon%2017612%20SW%20137th%20Ave%2C%20Miami%2C%20FL%2033177%2C%20USA" target="_blank" class="btn btn-primary">Leave a Review on Google</a>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section style="background: var(--surface);">
+        <div class="section-header text-center reveal" style="margin: 0 auto 4rem;">
+            <span class="eyebrow">Got Questions?</span>
+            <h2 class="h-medium">Frequently Asked.</h2>
+        </div>
+        <div class="faq-container reveal delay-2">
+            <div class="faq-item">
+                <div class="faq-question">
+                    Do I need to make an appointment?
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>While we do accept walk-ins based on availability, we highly recommend booking an appointment in advance to secure your preferred time and technician.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    What forms of payment do you accept?
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We accept all major credit cards, debit cards, Apple Pay, and cash.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Are your tools sanitized?
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely. Cleanliness is our top priority. All metal tools are sterilized in a medical-grade autoclave, and we use disposable liners for our pedicure bowls.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Do you offer group bookings or bridal parties?
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! We love hosting bridal parties, birthdays, and group events. Please call us directly to arrange a private group booking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Banner -->
+    <section class="final-cta reveal">
+        <div class="final-cta-bg"></div>
+        <div class="final-cta-overlay"></div>
+        <div class="final-cta-content">
+            <h2 class="h-huge" style="margin-bottom: 1.5rem;">Ready for Flawless Nails?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 3rem; color: var(--text-muted);">Step into luxury and let our experts transform your look. Appointments fill up fast.</p>
+            <a href="https://booksy.com/en-us/944061_yn-nails-beauty-salon_nails_miami" class="btn btn-primary" style="font-size: 1.1rem; padding: 1.2rem 3rem;">Book Your Experience</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="#" class="logo" style="margin-bottom: 1.5rem;">
+                    <i class="fas fa-gem" style="color: var(--primary);"></i>
+                    YN<span>.</span>
+                </a>
+                <p class="text-muted" style="max-width: 300px;">YN Nails & Beauty Salon is Miami's premier destination for luxury nail care, beauty treatments, and unparalleled relaxation.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="footer-links">
+                    <li style="display: flex; gap: 10px;"><i class="fas fa-map-marker-alt" style="color: var(--primary); margin-top: 5px;"></i> 17612 SW 137th Ave,<br>Miami, FL 33177, USA</li>
+                    <li><i class="fas fa-phone" style="color: var(--primary); width: 20px;"></i> <a href="tel:7864201625">(786) 420-1625</a></li>
+                    <li><i class="fas fa-envelope" style="color: var(--primary); width: 20px;"></i> <a href="mailto:hello@ynnailssalon.com">hello@ynnailssalon.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect Instantly</h4>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://booksy.com/en-us/944061_yn-nails-beauty-salon_nails_miami" alt="Scan to Connect" class="qr-code">
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 YN Nails & Beauty Salon. All rights reserved.</p>
+            <p style="margin-top: 0.5rem;">Built by SiteFlow</p>
+        </div>
+    </footer>
+
+    <!-- Hyper-Realistic Floating Chat Widget -->
+    <div class="chat-widget" id="chat-widget">
+        <div class="chat-panel" id="chat-panel">
+            <div class="chat-header">
+                <div class="chat-profile">
+                    <img src="./image-1.jpg" alt="Support" class="chat-avatar">
+                    <div class="chat-info">
+                        <h5>YN Concierge</h5>
+                        <span class="chat-status">Online</span>
+                    </div>
+                </div>
+                <button class="chat-close" id="chat-close-btn" style="background:none;border:none;color:white;font-size:20px;cursor:pointer;">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="chat-bubble chat-incoming">
+                    Hi there! How can we help you at YN Nails & Beauty Salon today?
+                    <div class="chat-time">Just now</div>
+                </div>
+            </div>
+            <div class="chat-quick-replies">
+                <button class="chat-qr-btn" data-reply="Hours?">Hours?</button>
+                <button class="chat-qr-btn" data-reply="Location?">Location?</button>
+                <button class="chat-qr-btn" data-reply="Services?">Services?</button>
+                <button class="chat-qr-btn" data-reply="WhatsApp Us">WhatsApp Us</button>
+                <button class="chat-qr-btn" data-reply="Leave a Review">Leave a Review</button>
+            </div>
+            <div class="chat-input-area">
+                <input type="text" placeholder="Type a message..." id="chat-input">
+                <button style="background:none;border:none;color:var(--primary);font-size:1.2rem;cursor:pointer;"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <button class="chat-fab" id="chat-fab">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-sticky-cta">
+        <a href="https://booksy.com/en-us/944061_yn-nails-beauty-salon_nails_miami">BOOK APPOINTMENT NOW</a>
+    </div>
+
+    <!-- Promo Popup -->
+    <div class="promo-popup" id="promo-popup">
+        <div class="promo-content">
+            <button class="promo-close close-modal"><i class="fas fa-times"></i></button>
+            <h2 class="h-medium" style="color: var(--primary); margin-bottom: 1rem;">VIP Welcome Offer</h2>
+            <p style="margin-bottom: 2rem;">Get 15% off your first visit when you book online today.</p>
+            <a href="https://booksy.com/en-us/944061_yn-nails-beauty-salon_nails_miami" class="btn btn-primary close-modal" style="width: 100%;">Claim Offer & Book</a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        try {
+            // Preloader
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    const preloader = document.getElementById('preloader');
+                    preloader.style.opacity = '0';
+                    preloader.style.visibility = 'hidden';
+                    setTimeout(() => preloader.remove(), 800);
+                }, 1000);
+            });
+
+            // Navbar Scroll Effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Mobile Menu Toggle
+            const hamburgerBtn = document.getElementById('hamburger-btn');
+            const mobileCloseBtn = document.getElementById('mobile-close-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+
+            hamburgerBtn.addEventListener('click', () => {
+                mobileMenu.classList.add('active');
+            });
+
+            mobileCloseBtn.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                });
+            });
+
+            // Scroll Reveal (Intersection Observer)
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealOptions = {
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, revealOptions);
+
+            revealElements.forEach(el => {
+                revealObserver.observe(el);
+            });
+
+            // Stats Counter
+            const countElements = document.querySelectorAll('.count');
+            let counted = false;
+
+            const countObserver = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting && !counted) {
+                    counted = true;
+                    countElements.forEach(el => {
+                        const target = parseInt(el.getAttribute('data-target'));
+                        const duration = 2000; // 2 seconds
+                        const step = target / (duration / 16); // 60fps
+                        let current = 0;
+
+                        const updateCount = () => {
+                            current += step;
+                            if (current < target) {
+                                el.innerText = Math.ceil(current);
+                                requestAnimationFrame(updateCount);
+                            } else {
+                                el.innerText = target;
+                            }
+                        };
+                        updateCount();
+                    });
+                }
+            });
+            if(document.querySelector('.stats-grid')) {
+                countObserver.observe(document.querySelector('.stats-grid'));
+            }
+
+            // FAQ Accordion
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    // Close all
+                    faqItems.forEach(i => {
+                        i.classList.remove('active');
+                        i.querySelector('.faq-answer').style.maxHeight = null;
+                    });
+                    // Open clicked if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                        const answer = item.querySelector('.faq-answer');
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    }
+                });
+            });
+
+            // Live Open/Closed Badge Logic
+            const updateStatus = () => {
+                const badge = document.getElementById('status-badge');
+                const text = badge.querySelector('.status-text');
+                const now = new Date();
+                
+                // Convert to Miami time (EST/EDT)
+                const miamiTime = new Date(now.toLocaleString("en-US", {timeZone: "America/New_York"}));
+                const day = miamiTime.getDay(); // 0 = Sunday, 1 = Monday, etc.
+                const hour = miamiTime.getHours();
+                const minutes = miamiTime.getMinutes();
+                const timeInMinutes = hour * 60 + minutes;
+
+                // Hours: Tue-Sat 9:00 AM (540) to 7:00 PM (1140). Mon/Sun Closed.
+                const openTime = 9 * 60; // 540
+                const closeTime = 19 * 60; // 1140
+
+                let isOpen = false;
+                if (day >= 2 && day <= 6) { // Tuesday to Saturday
+                    if (timeInMinutes >= openTime && timeInMinutes < closeTime) {
+                        isOpen = true;
+                    }
+                }
+
+                if (isOpen) {
+                    badge.classList.remove('status-closed');
+                    badge.classList.add('status-open');
+                    text.innerText = 'OPEN NOW';
+                } else {
+                    badge.classList.remove('status-open');
+                    badge.classList.add('status-closed');
+                    text.innerText = 'CLOSED';
+                }
+            };
+            updateStatus();
+            setInterval(updateStatus, 60000); // Update every minute
+
+            // Chat Widget Logic
+            const chatFab = document.getElementById('chat-fab');
+            const chatPanel = document.getElementById('chat-panel');
+            const chatCloseBtn = document.getElementById('chat-close-btn');
+            const chatBody = document.getElementById('chat-body');
+            const qrBtns = document.querySelectorAll('.chat-qr-btn');
+
+            const toggleChat = () => {
+                chatPanel.classList.toggle('active');
+                if (chatPanel.classList.contains('active')) {
+                    chatFab.innerHTML = '<i class="fas fa-times"></i>';
+                } else {
+                    chatFab.innerHTML = '<i class="fas fa-comment-dots"></i>';
+                }
+            };
+
+            chatFab.addEventListener('click', toggleChat);
+            chatCloseBtn.addEventListener('click', toggleChat);
+
+            const addMessage = (text, type) => {
+                const msg = document.createElement('div');
+                msg.className = `chat-bubble chat-${type}`;
+                msg.innerHTML = `${text}<div class="chat-time">Just now</div>`;
+                chatBody.appendChild(msg);
+                chatBody.scrollTop = chatBody.scrollHeight;
+            };
+
+            qrBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const reply = btn.getAttribute('data-reply');
+                    addMessage(reply, 'outgoing');
+                    
+                    setTimeout(() => {
+                        let response = "";
+                        if (reply === "Hours?") response = "We are open Tuesday through Saturday from 9:00 AM to 7:00 PM. We are closed on Sundays and Mondays.";
+                        else if (reply === "Location?") response = "We are located at 17612 SW 137th Ave, Miami, FL 33177.";
+                        else if (reply === "Services?") response = "We offer luxury manicures, pedicures, acrylics, gel extensions, and various beauty treatments.";
+                        else if (reply === "WhatsApp Us") response = `<a href="https://wa.me/7864201625" target="_blank" style="text-decoration: underline; color: #25D366;">💬 Chat with us on WhatsApp!</a>`;
+                        else if (reply === "Leave a Review") response = `<a href="https://www.google.com/maps/search/YN%20Nails%20%26%20Beauty%20Salon%2017612%20SW%20137th%20Ave%2C%20Miami%2C%20FL%2033177%2C%20USA" target="_blank" style="text-decoration: underline; color: #3b82f6;">Click here to leave a Google Review!</a>`;
+                        
+                        addMessage(response, 'incoming');
+                    }, 500);
+                });
+            });
+
+            // Promo Popup Logic
+            setTimeout(() => {
+                const popup = document.getElementById('promo-popup');
+                if(!sessionStorage.getItem('promoShown')) {
+                    popup.style.display = 'flex';
+                    sessionStorage.setItem('promoShown', 'true');
+                }
+            }, 5000);
+
+            // CRITICAL JAVASCRIPT: Modal Close Logic
+            document.body.addEventListener('click', e => { 
+                if(e.target.closest('.close-modal, .modal-close, .close, [aria-label="Close"]') || e.target.classList.contains('promo-popup')) { 
+                    const m = e.target.closest('.promo-popup, .modal, .popup, #popup, .fixed'); 
+                    if(m) m.style.display = 'none'; 
+                    else document.querySelectorAll('.promo-popup, .modal, .popup, #popup').forEach(p=>p.style.display='none'); 
+                } 
+            });
+
+        } catch (e) {
+            console.error("Script error:", e);
+        }
+    </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger') || document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const isActive = mobileMenu.classList.contains('active');
+        if (isActive) {
+          mobileMenu.classList.remove('active');
+          mobileMenu.style.transform = 'translateX(100%)';
+          hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+        } else {
+          mobileMenu.classList.add('active');
+          mobileMenu.style.transform = 'translateX(0)';
+          hamburger.innerHTML = '<i class="fas fa-times" style="font-size: 28px;"></i>';
+        }
+      });
+
+      // Close when clicking any link inside the mobile menu
+      const links = mobileMenu.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', function() {
+          mobileMenu.classList.remove('active');
+          mobileMenu.style.transform = 'translateX(100%)';
+          hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+      });
+      
+      // Close button inside menu (if it exists separately)
+      const closeBtn = mobileMenu.querySelector('.close-menu') || mobileMenu.querySelector('.mobile-close');
+      if (closeBtn) {
+        closeBtn.addEventListener('click', function() {
+          mobileMenu.classList.remove('active');
+          mobileMenu.style.transform = 'translateX(100%)';
+          hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+        });
+      }
+    }
+  });
+</script>
+</body>
+</html>
